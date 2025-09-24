@@ -97,7 +97,7 @@ async function createHotel(newHotel) {
 
 // createHotel(newHotel);
 
-// 1
+// 1. Update hotel by id
 
 async function updateHotelById(hotelId, dataToUpdate) {
   try {
