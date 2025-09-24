@@ -30,7 +30,6 @@ const newHotel = {
 */
 
 // 1
-
 /*
 const newHotel = {
   name: "Lake View",
@@ -58,7 +57,6 @@ const newHotel = {
 */
 
 // 2
-
 const newHotel = {
   name: "Sunset Resort",
   category: "Resort",
@@ -100,7 +98,6 @@ async function createHotel(newHotel) {
 }
 
 // 3
-
 async function getAllHotels() {
   try {
     const hotels = await Hotel.find();
@@ -110,6 +107,7 @@ async function getAllHotels() {
   }
 }
 
+// 4
 async function getHotelByName(name) {
   try {
     const hotel = await Hotel.findOne({ name });
@@ -119,6 +117,7 @@ async function getHotelByName(name) {
   }
 }
 
+// 5
 async function getHotelsWithParking() {
   try {
     const hotels = await Hotel.find({ isParkingAvailable: true });
@@ -128,6 +127,7 @@ async function getHotelsWithParking() {
   }
 }
 
+// 6
 async function getHotelsWithRestaurant() {
   try {
     const hotels = await Hotel.find({ isRestaurantAvailable: true });
@@ -137,6 +137,7 @@ async function getHotelsWithRestaurant() {
   }
 }
 
+// 7
 async function getHotelsByCategory(category) {
   try {
     const hotels = await Hotel.find({ category });
@@ -146,6 +147,7 @@ async function getHotelsByCategory(category) {
   }
 }
 
+// 8
 async function getHotelsByPriceRange(priceRange) {
   try {
     const hotels = await Hotel.find({ priceRange });
@@ -155,6 +157,7 @@ async function getHotelsByPriceRange(priceRange) {
   }
 }
 
+// 9
 async function getHotelsByRating(rating) {
   try {
     const hotels = await Hotel.find({ rating });
@@ -164,6 +167,7 @@ async function getHotelsByRating(rating) {
   }
 }
 
+// 10
 async function getHotelByPhone(phoneNumber) {
   try {
     const hotel = await Hotel.findOne({ phoneNumber });
