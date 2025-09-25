@@ -123,7 +123,7 @@ async function updateRestaurantByPhone(phoneNumber, dataToUpdate) {
 
 // updateRestaurantByPhone("+1288997392", { isDeliveryAvailable: true });
 
-// 2
+// 1
 
 async function deleteRestaurantById(restaurantId) {
   try {
