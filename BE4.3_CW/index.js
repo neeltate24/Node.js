@@ -140,6 +140,7 @@ async function deleteMovie(movieId) {
     return deletedMovie;
   } catch (error) {
     console.log(error);
+    throw error;
   }
 }
 
