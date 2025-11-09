@@ -1,5 +1,8 @@
 const express = require("express");
+const cors = require("cors");
 const app = express();
+
+app.use(cors());
 
 const { initializeDatabase } = require("./db/db.connect");
 const Book = require("./models/book.model");
@@ -9,7 +12,7 @@ app.use(express.json());
 // initialize database
 initializeDatabase();
 
-// 1. CREATE A NEW BOOK (POST /books)
+// 1. Create a new book
 async function createBook(newBook) {
   try {
     const book = new Book(newBook);
