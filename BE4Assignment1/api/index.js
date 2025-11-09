@@ -220,4 +220,6 @@ app.delete("/books/:bookId", async (req, res) => {
 
 // Vercel requirement
 
-module.exports = app;
+module.exports = async (req, res) => {
+  res.json({ message: "API Works!" });
+};
