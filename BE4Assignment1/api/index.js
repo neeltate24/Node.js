@@ -4,8 +4,8 @@ const app = express();
 
 app.use(cors());
 
-const { initializeDatabase } = require("./db/db.connect");
-const Book = require("./models/book.model");
+const { initializeDatabase } = require("../db/db.connect");
+const Book = require("../models/book.model");
 
 app.use(express.json());
 
@@ -213,7 +213,11 @@ app.delete("/books/:bookId", async (req, res) => {
 });
 
 // Server Start
-const PORT = 3000;
-app.listen(PORT, () => {
-  console.log(` Server running on port ${PORT}`);
-});
+// const PORT = 3000;
+// app.listen(PORT, () => {
+//   console.log(` Server running on port ${PORT}`);
+// });
+
+// Vercel requirement
+
+module.exports = app;
