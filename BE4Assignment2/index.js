@@ -1,9 +1,11 @@
 const express = require("express");
+const cors = require("cors");
 const app = express();
 
 const { initializeDatabase } = require("./db/db.connect");
 const Recipe = require("./models/recipe.model");
 
+app.use(cors());
 app.use(express.json());
 
 // Initialize the database
@@ -238,7 +240,7 @@ app.get("/", (req, res) => {
   res.send("Welcome to the Recipe API");
 });
 
-const PORT = process.env.PORT || 3000
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
