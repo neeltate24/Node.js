@@ -18,7 +18,7 @@ async function createRecipe(newRecipe) {
     console.log("New Recipe added:", savedRecipe);
     return savedRecipe;
   } catch (error) {
-    throw error; // will be caught by route
+    throw error; 
   }
 }
 
