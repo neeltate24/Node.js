@@ -27,6 +27,7 @@ const EventDetails = () => {
               src={event.image}
               alt={event.title}
               className="img-fluid rounded mb-4"
+              style={{ maxWidth: "600px", width: "100%" }}
             />
 
             <h5 className="fw-bold">Details</h5>
